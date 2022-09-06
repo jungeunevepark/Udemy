@@ -1,27 +1,20 @@
-const name = 'MAX';               // string 변수
-let age = 29;
-const hasHobbies = true;          
-// var은 새로운 변수를 생성하는 키워드, 오래됨 -> let사용
-// const -> 변경 불가 / let -> 변경가능
+const person = {
+    name: 'MAX',
+    age: 29,
+    greet(){
+        console.log('Hi, I am ' + this.name)
+    }
+};
 
-age = 30;
+const hobbies = ['Sports', 'Cooking']; // text array
 
-const summarizeUser = (userName, userAge, userHasHobby) => {   // 강의 내에서는 화살표 함수만 사용할 것
-    return (                                                   // function body
-        'Name is ' + 
-        userName + 
-        ', age is ' + 
-        userAge + 
-        ' and the user has hobbies: ' + 
-        userHasHobby
-    );
-} // 굳이 변수로 받지 않아도 되지만 바람직한 형태임(외부에서 변수를 받기 때문)
+// for (let hobby of hobbies) {
+//     console.log(hobby);
+// }
 
-// const add = (a, b) => a + b;
-// const addOne = a => a + 1;
-const addRandom = () => 1 + 2;
+// javascript에는 다양한 내장 메소드 존재
+console.log(hobbies.map(hobby => 'Hobby: ' + hobby));
+//새로운 string을 추가하겠다는 뜻
 
-// 인수가 없다라면 괄호 써줘야함
-
-console.log(addRandom());
-console.log(summarizeUser(name, age, hasHobbies));
+console.log(hobbies);
+//기존의 배열은 수정되지 않았음을 알수 있음
