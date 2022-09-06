@@ -17,9 +17,11 @@ const summarizeUser = (userName, userAge, userHasHobby) => {   // 강의 내에�
     );
 } // 굳이 변수로 받지 않아도 되지만 바람직한 형태임(외부에서 변수를 받기 때문)
 
-const add = (a, b) => a + b;
+// const add = (a, b) => a + b;
+// const addOne = a => a + 1;
+const addRandom = () => 1 + 2;
 
-// return 문 하나만 있는 화살표 함수라면 중괄호와 return 생략 가능
+// 인수가 없다라면 괄호 써줘야함
 
-console.log(add(1, 2));
+console.log(addRandom());
 console.log(summarizeUser(name, age, hasHobbies));
