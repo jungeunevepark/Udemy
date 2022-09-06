@@ -6,15 +6,35 @@ const person = {
     }
 };
 
+const printName = ({ name }) => {
+    console.log(name);
+}
+
+printName(person);
+
+const { name, age } = person;
+console.log(name, age);
+
+
+// const copiedPerson = {...person};
+// console.log(copiedPerson);
+
 const hobbies = ['Sports', 'Cooking']; // text array
+const [hobby1, hobby2] = hobbies;
+console.log(hobby1, hobby2);
 
-// for (let hobby of hobbies) {
-//     console.log(hobby);
-// }
+// // for (let hobby of hobbies) {
+// //     console.log(hobby);
+// // }
+// // console.log(hobbies.map(hobby => 'Hobby: ' + hobby));
 
-// javascript에는 다양한 내장 메소드 존재
-console.log(hobbies.map(hobby => 'Hobby: ' + hobby));
-//새로운 string을 추가하겠다는 뜻
+// // const copiesArray = hobbies.slice();     // 배열을 복사함
+// // const copiesArray = [hobbies];              // 중첩 배열
+// const copiesArray = [...hobbies];
+// console.log(copiesArray);
 
-console.log(hobbies);
-//기존의 배열은 수정되지 않았음을 알수 있음
+// const toArray = (...args) => {
+//     return args;
+// };
+
+// console.log(toArray(1, 2, 3, 4));
